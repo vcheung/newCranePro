@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'workwidget.ui'
 **
-** Created: Thu Aug 29 15:16:57 2013
+** Created: Thu Aug 29 15:48:28 2013
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -39,8 +39,10 @@ public:
         if (workwidget->objectName().isEmpty())
             workwidget->setObjectName(QString::fromUtf8("workwidget"));
         workwidget->resize(800, 480);
+        workwidget->setAutoFillBackground(false);
         groupBox = new QGroupBox(workwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setEnabled(true);
         groupBox->setGeometry(QRect(0, 0, 800, 60));
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
@@ -81,6 +83,7 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush1);
         groupBox->setPalette(palette);
+        groupBox->setAutoFillBackground(true);
         horizontalLayout = new QHBoxLayout(groupBox);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label_5 = new QLabel(groupBox);
@@ -145,6 +148,7 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush10);
         palette1.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
         label_5->setPalette(palette1);
+        label_5->setAutoFillBackground(true);
 
         horizontalLayout->addWidget(label_5);
 
@@ -206,6 +210,7 @@ public:
         font.setBold(true);
         font.setWeight(75);
         label->setFont(font);
+        label->setAutoFillBackground(true);
 
         horizontalLayout->addWidget(label);
 
@@ -259,6 +264,7 @@ public:
         palette3.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
         label_2->setPalette(palette3);
         label_2->setFont(font);
+        label_2->setAutoFillBackground(true);
 
         horizontalLayout->addWidget(label_2);
 
@@ -312,6 +318,7 @@ public:
         palette4.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
         label_3->setPalette(palette4);
         label_3->setFont(font);
+        label_3->setAutoFillBackground(true);
 
         horizontalLayout->addWidget(label_3);
 
@@ -365,6 +372,7 @@ public:
         palette5.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
         label_4->setPalette(palette5);
         label_4->setFont(font);
+        label_4->setAutoFillBackground(true);
 
         horizontalLayout->addWidget(label_4);
 
@@ -430,6 +438,7 @@ public:
         palette6.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
         label_6->setPalette(palette6);
         label_6->setFont(font);
+        label_6->setAutoFillBackground(true);
 
         horizontalLayout->addWidget(label_6);
 

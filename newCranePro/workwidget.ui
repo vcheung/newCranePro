@@ -13,7 +13,13 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <widget class="QGroupBox" name="groupBox">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -274,6 +280,9 @@
       </colorrole>
      </disabled>
     </palette>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
    </property>
    <property name="title">
     <string/>
@@ -701,6 +710,9 @@
          </colorrole>
         </disabled>
        </palette>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
       <property name="text">
        <string/>
@@ -1131,6 +1143,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
       <property name="text">
        <string>电量</string>
       </property>
@@ -1559,6 +1574,9 @@
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
       <property name="text">
        <string>位置</string>
@@ -1989,6 +2007,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
       <property name="text">
        <string>3G</string>
       </property>
@@ -2418,6 +2439,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
       <property name="text">
        <string>电量</string>
       </property>
@@ -2846,6 +2870,9 @@
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
       <property name="text">
        <string/>
