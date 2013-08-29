@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "workwidget.h"     //工作界面
 
 namespace Ui {
 class MainWindow;
