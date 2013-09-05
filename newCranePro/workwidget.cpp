@@ -17,7 +17,7 @@ workwidget::workwidget(QWidget *parent) :
     ui->FinishWorkBtn->setDisabled(true);
     ui->ManInputBtn->setStyleSheet("background-color:green");
     createMenuWidget();
-
+    CoWork = new CompleteWork;
 }
 
 workwidget::~workwidget()

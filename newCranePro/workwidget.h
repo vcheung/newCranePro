@@ -2,6 +2,7 @@
 #define WORKWIDGET_H
 
 #include <QWidget>
+#include "completework.h"
 
 namespace Ui {
 class workwidget;
@@ -15,7 +16,7 @@ public:
     explicit workwidget(QWidget *parent = 0);
     ~workwidget();
     void createMenuWidget();
-
+    CompleteWork *CoWork;
     
 private:
     Ui::workwidget *ui;

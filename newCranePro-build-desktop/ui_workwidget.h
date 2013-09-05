@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'workwidget.ui'
 **
-** Created: Thu Sep 5 14:19:02 2013
+** Created: Thu Sep 5 15:46:49 2013
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

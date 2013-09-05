@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'workwidget.h'
 **
-** Created: Thu Sep 5 14:21:19 2013
+** Created: Thu Sep 5 16:25:43 2013
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
