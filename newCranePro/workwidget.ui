@@ -289,7 +289,7 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="TimeLab">
       <property name="minimumSize">
        <size>
         <width>480</width>
@@ -720,7 +720,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="EleLab">
       <property name="palette">
        <palette>
         <active>
@@ -1152,7 +1152,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="PositionLab">
       <property name="palette">
        <palette>
         <active>
@@ -1584,7 +1584,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="ThreeGLab">
       <property name="palette">
        <palette>
         <active>
@@ -2016,7 +2016,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="OverloadLabT">
       <property name="palette">
        <palette>
         <active>
@@ -2443,12 +2443,12 @@
        <bool>true</bool>
       </property>
       <property name="text">
-       <string>电量</string>
+       <string>超载</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="OverloadLabN">
       <property name="palette">
        <palette>
         <active>
@@ -2880,12 +2880,12 @@
      </widget>
     </item>
    </layout>
-   <zorder>label_5</zorder>
-   <zorder>label_6</zorder>
-   <zorder>label</zorder>
-   <zorder>label_2</zorder>
-   <zorder>label_4</zorder>
-   <zorder>label_3</zorder>
+   <zorder>TimeLab</zorder>
+   <zorder>OverloadLabN</zorder>
+   <zorder>EleLab</zorder>
+   <zorder>PositionLab</zorder>
+   <zorder>OverloadLabT</zorder>
+   <zorder>ThreeGLab</zorder>
   </widget>
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
@@ -3383,7 +3383,7 @@
      <string>船名</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="ConDriverName">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -3393,7 +3393,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_10">
+   <widget class="QLabel" name="ConShipName">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -3883,7 +3883,7 @@
      <string>仓位</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_13">
+   <widget class="QLabel" name="ConCabinNum">
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -4324,7 +4324,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_14">
+   <widget class="QLabel" name="ConWorkNum">
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -5639,7 +5639,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_16">
+     <widget class="QLabel" name="NetWeightLab">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -6539,7 +6539,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_18">
+     <widget class="QLabel" name="OnDutySumLab">
       <property name="palette">
        <palette>
         <active>
@@ -7415,7 +7415,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_20">
+     <widget class="QLabel" name="WorkTimesLab">
       <property name="palette">
        <palette>
         <active>
@@ -9189,7 +9189,7 @@
      <string>幅度</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_27">
+   <widget class="QLabel" name="RoughWeightLab">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -9633,7 +9633,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_28">
+   <widget class="QLabel" name="RatedWeightLab">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -10077,7 +10077,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_29">
+   <widget class="QLabel" name="RangeLab">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -11860,7 +11860,7 @@
      <string>皮重</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_32">
+   <widget class="QLabel" name="EmptyWeightLab">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -12304,7 +12304,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_30">
+   <widget class="QLabel" name="HeightLab">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -12748,7 +12748,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_31">
+   <widget class="QLabel" name="EnergyLab">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -14090,7 +14090,7 @@
      <string>姓名</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_37">
+   <widget class="QLabel" name="DriverNameLab">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -14534,7 +14534,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_33">
+   <widget class="QLabel" name="ShipName">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -14978,7 +14978,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_34">
+   <widget class="QLabel" name="WorkNum">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -15863,7 +15863,7 @@
      <string>船名</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="ManInputBtn">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -16322,7 +16322,7 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3">
     <item>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="StartWorkBtn">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -16342,7 +16342,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="FinishWorkBtn">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -16362,7 +16362,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="QuPiBtn">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -16839,7 +16839,7 @@
      <string>亮度调节</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="zengjia">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -16865,7 +16865,7 @@
      <string>+</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="jianshao">
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -17332,7 +17332,7 @@
      <string>存储记录</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_41">
+   <widget class="QLabel" name="RecordState">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -17773,7 +17773,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_42">
+   <widget class="QLabel" name="SysInfStatus">
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -18655,7 +18655,7 @@
      <string>系统信息</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="MenuBtn">
     <property name="geometry">
      <rect>
       <x>700</x>

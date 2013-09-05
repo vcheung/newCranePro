@@ -15,10 +15,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    workwidget.cpp
+    workwidget.cpp \
+    completework.cpp
 
 HEADERS  += mainwindow.h \
-    workwidget.h
+    workwidget.h \
+    completework.h
 
 FORMS    += mainwindow.ui \
-    workwidget.ui
+    workwidget.ui \
+    completework.ui

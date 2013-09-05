@@ -14,9 +14,12 @@ class workwidget : public QWidget
 public:
     explicit workwidget(QWidget *parent = 0);
     ~workwidget();
+    void createMenuWidget();
+
     
 private:
     Ui::workwidget *ui;
+    QWidget *menu;
 };
 
 #endif // WORKWIDGET_H
