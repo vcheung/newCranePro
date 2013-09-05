@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'completework.ui'
 **
-** Created: Thu Sep 5 16:25:21 2013
+** Created: Thu Sep 5 17:57:30 2013
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -61,7 +61,7 @@ public:
         label->setAlignment(Qt::AlignCenter);
         label_2 = new QLabel(CompleteWork);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(-10, 120, 800, 60));
+        label_2->setGeometry(QRect(0, 120, 800, 60));
         QPalette palette1;
         QBrush brush2(QColor(0, 0, 0, 255));
         brush2.setStyle(Qt::SolidPattern);
@@ -124,7 +124,7 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush2);
         label_2->setPalette(palette1);
         QFont font1;
-        font1.setPointSize(17);
+        font1.setPointSize(16);
         font1.setBold(true);
         font1.setWeight(75);
         label_2->setFont(font1);
@@ -238,14 +238,19 @@ public:
         label_4->setAlignment(Qt::AlignCenter);
         groupBox = new QGroupBox(CompleteWork);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(0, 300, 800, 100));
+        groupBox->setGeometry(QRect(0, 300, 800, 120));
         horizontalLayout = new QHBoxLayout(groupBox);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         SureBtn = new QPushButton(groupBox);
         SureBtn->setObjectName(QString::fromUtf8("SureBtn"));
-        SureBtn->setMaximumSize(QSize(100, 16777215));
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(SureBtn->sizePolicy().hasHeightForWidth());
+        SureBtn->setSizePolicy(sizePolicy);
+        SureBtn->setMaximumSize(QSize(100, 50));
         QFont font2;
-        font2.setPointSize(16);
+        font2.setPointSize(15);
         font2.setBold(true);
         font2.setWeight(75);
         SureBtn->setFont(font2);
@@ -254,7 +259,7 @@ public:
 
         BackToWorkBtn = new QPushButton(groupBox);
         BackToWorkBtn->setObjectName(QString::fromUtf8("BackToWorkBtn"));
-        BackToWorkBtn->setMaximumSize(QSize(100, 16777215));
+        BackToWorkBtn->setMaximumSize(QSize(100, 50));
         BackToWorkBtn->setFont(font2);
 
         horizontalLayout->addWidget(BackToWorkBtn);
