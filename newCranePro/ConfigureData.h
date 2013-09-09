@@ -2,6 +2,8 @@
 #define CONFIGUREDATA_H
 #include <QMutex>
 
+#define WorkInfoFile "WorkInfo.dat"
+
 typedef struct
 {
     long msWorkCode;

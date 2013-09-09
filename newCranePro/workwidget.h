@@ -3,6 +3,9 @@
 
 #include <QWidget>
 #include "completework.h"
+#include "ConfigureData.h"
+#include "basefile.h"
+#include "recordfile.h"
 
 namespace Ui {
 class workwidget;
@@ -17,10 +20,23 @@ public:
     ~workwidget();
     void createMenuWidget();
     CompleteWork *CoWork;
-    
+
+    void ReadWorkStateConfig();
+
 private:
     Ui::workwidget *ui;
     QWidget *menu;
+
+    WorkInfo SaveWorkInfo[3];
+    WRState mRecordState;
+    BackWorkInfo mBackWorkInfo;
+
+    BaseFile *pWorkInfoFile;
+    RecordFile *pMRecordState;
+
+public slots:
+    void UpdataNetWorkInfoSlot();
+    void ComIndexChange(int Index);
 };
 
 #endif // WORKWIDGET_H

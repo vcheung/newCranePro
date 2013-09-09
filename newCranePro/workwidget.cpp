@@ -1,6 +1,8 @@
 #include "workwidget.h"
 #include "ui_workwidget.h"
 
+QMutex FileMutex;   //全局变量在使用时还要声明一下
+
 workwidget::workwidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::workwidget)
@@ -18,6 +20,21 @@ workwidget::workwidget(QWidget *parent) :
     ui->ManInputBtn->setStyleSheet("background-color:green");
     createMenuWidget();
     CoWork = new CompleteWork;
+
+    memset(SaveWorkInfo,0,3*sizeof(WorkInfo));
+    memset(&mRecordState,0,sizeof(WRState));
+    memset(&mBackWorkInfo,0,sizeof(BackWorkInfo));
+
+    pWorkInfoFile = new BaseFile(WorkInfoFile);
+
+    FileMutex.lock();
+    pWorkInfoFile->ReadData((char*)&SaveWorkInfo[0],sizeof(WorkInfo),0);
+    pWorkInfoFile->ReadData((char*)&SaveWorkInfo[1],sizeof(WorkInfo),sizeof(WorkInfo));
+    pWorkInfoFile->ReadData((char*)&SaveWorkInfo[2],sizeof(WorkInfo),2*sizeof(WorkInfo));
+    FileMutex.unlock();
+
+    UpdataNetWorkInfoSlot();    //显示派工信息
+
 }
 
 workwidget::~workwidget()
@@ -71,4 +88,33 @@ void workwidget::createMenuWidget()
     menu->setStyleSheet(tr("QWidget{background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,")
                         +tr("stop: 0 #bbbbbb, stop: 1.0 #c0c0c0);border-radius:15px;}")+tr("font-size : 22px"));
     menu->setVisible(false);
+}
+
+void workwidget::UpdataNetWorkInfoSlot()
+{
+    ui->ConDriverName->clear();
+    for(int i=1; i<3; i++)
+    {
+        if(SaveWorkInfo[i].msWorkCode != 0)
+            ui->ConDriverName->addItem(QString::fromLocal8Bit(SaveWorkInfo[i].DriverName));
+        //使用fromLocal8Bit()函数,实现了从本地字符集GB到Unicode的转换,主要应用于处理汉语显示乱码等问题
+    }
+    ui->ConDriverName->setCurrentIndex(0);
+    ComIndexChange(0);
+}
+
+void workwidget::ComIndexChange(int Index)
+{
+    QString mCabinNum;
+    if(Index<0)
+        return;
+    ui->ConWorkNum->setText(QString::number(SaveWorkInfo[Index+1].msWorkCode));
+    ui->ConShipName->setText(QString::fromLocal8Bit(SaveWorkInfo[Index+1].ShipName));
+    mCabinNum.sprintf("%d",SaveWorkInfo[Index+1].CabinNum); //把CabinNum格式转为%d
+    ui->ConCabinNum->setText(mCabinNum);
+}
+
+void workwidget::ReadWorkStateConfig()
+{
+
 }
