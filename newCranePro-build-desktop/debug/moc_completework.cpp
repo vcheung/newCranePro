@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'completework.h'
 **
-** Created: Thu Sep 5 16:52:17 2013
+** Created: Tue Sep 10 15:59:16 2013
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,18 +23,28 @@ static const uint qt_meta_data_CompleteWork[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       2,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+      14,   13,   13,   13, 0x05,
+      32,   13,   13,   13, 0x05,
+
+ // slots: signature, parameters, type, tag, flags
+      50,   13,   13,   13, 0x08,
+      71,   13,   13,   13, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_CompleteWork[] = {
-    "CompleteWork\0"
+    "CompleteWork\0\0WorkFinishedSig()\0"
+    "SwitchToWorkSig()\0on_SureBtn_clicked()\0"
+    "on_BackToWorkBtn_clicked()\0"
 };
 
 const QMetaObject CompleteWork::staticMetaObject = {
@@ -64,6 +74,28 @@ int CompleteWork::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: WorkFinishedSig(); break;
+        case 1: SwitchToWorkSig(); break;
+        case 2: on_SureBtn_clicked(); break;
+        case 3: on_BackToWorkBtn_clicked(); break;
+        default: ;
+        }
+        _id -= 4;
+    }
     return _id;
+}
+
+// SIGNAL 0
+void CompleteWork::WorkFinishedSig()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, 0);
+}
+
+// SIGNAL 1
+void CompleteWork::SwitchToWorkSig()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, 0);
 }
 QT_END_MOC_NAMESPACE

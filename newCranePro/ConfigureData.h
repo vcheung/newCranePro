@@ -3,6 +3,8 @@
 #include <QMutex>
 
 #define WorkInfoFile "WorkInfo.dat"
+#define IniAddr  "Configure.ini"
+#define MaxCounter 20000
 
 typedef struct
 {
@@ -30,6 +32,17 @@ typedef struct
     char TurnFlag;
 }WRState,*pWRState;
 
+enum WorkingState   //#工作状态的枚举
+{
+    Normal = 1,
+    StartWork = 2,
+    FinishWork = 3,
+    NotWork =4,
+    QuPi = 5
+};
+
 extern QMutex FileMutex;
+extern int mWorkingState;
+extern long WorkCode;
 
 #endif // CONFIGUREDATA_H

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'workwidget.h'
 **
-** Created: Mon Sep 9 16:01:03 2013
+** Created: Tue Sep 10 15:59:12 2013
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_workwidget[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -33,13 +33,22 @@ static const uint qt_meta_data_workwidget[] = {
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x0a,
       42,   36,   11,   11, 0x0a,
+      62,   11,   11,   11, 0x0a,
+      80,   11,   11,   11, 0x0a,
+      93,   11,   11,   11, 0x0a,
+     108,   11,   11,   11, 0x0a,
+     123,   11,   11,   11, 0x08,
+     149,   11,   11,   11, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_workwidget[] = {
     "workwidget\0\0UpdataNetWorkInfoSlot()\0"
-    "Index\0ComIndexChange(int)\0"
+    "Index\0ComIndexChange(int)\0ShowRecordState()\0"
+    "updatetime()\0WorkFinished()\0ToWorkWidget()\0"
+    "on_StartWorkBtn_clicked()\0"
+    "on_FinishWorkBtn_clicked()\0"
 };
 
 const QMetaObject workwidget::staticMetaObject = {
@@ -73,9 +82,15 @@ int workwidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: UpdataNetWorkInfoSlot(); break;
         case 1: ComIndexChange((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 2: ShowRecordState(); break;
+        case 3: updatetime(); break;
+        case 4: WorkFinished(); break;
+        case 5: ToWorkWidget(); break;
+        case 6: on_StartWorkBtn_clicked(); break;
+        case 7: on_FinishWorkBtn_clicked(); break;
         default: ;
         }
-        _id -= 2;
+        _id -= 8;
     }
     return _id;
 }
