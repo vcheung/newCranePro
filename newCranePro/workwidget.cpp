@@ -26,6 +26,8 @@ workwidget::workwidget(QWidget *parent) :
     createMenuWidget();
     CoWork = new CompleteWork;
 
+    istimeout = false;
+
     memset(SaveWorkInfo,0,3*sizeof(WorkInfo));
     memset(&mRecordState,0,sizeof(WRState));
     memset(&mBackWorkInfo,0,sizeof(BackWorkInfo));
@@ -48,6 +50,7 @@ workwidget::workwidget(QWidget *parent) :
 
     connect(CoWork,SIGNAL(WorkFinishedSig()),this,SLOT(WorkFinished()));
     connect(CoWork,SIGNAL(SwitchToWorkSig()),this,SLOT(ToWorkWidget()));
+    connect(ui->MenuBtn,SIGNAL(clicked()),this,SLOT(MenuShow()));
 }
 
 workwidget::~workwidget()
@@ -285,4 +288,36 @@ void workwidget::ToWorkWidget() //取消工作完成
 {
     CoWork->hide();
     this->show();
+}
+
+//void workwidget::on_MenuBtn_clicked()   //点击菜单按钮，showMenu()
+void workwidget::MenuShow()
+{
+    mutex.lock();
+    timerid=startTimer(200);    //控制点击菜单按钮是否超过200ms,#一定要设置到时后的istimeout的值
+    if(istimeout)   //构造函数中设置，istimeout初始值为true
+    {
+        if(this->menu->isVisible())
+        {
+            this->menu->setVisible(false);
+            ui->MenuBtn->setText("打开菜单");
+            ui->MenuBtn->setStyleSheet("background-color: rgb(0,170,0)");
+        }
+        else
+        {
+            this->menu->setVisible(true);
+            ui->MenuBtn->setText("关闭菜单");
+            ui->MenuBtn->setStyleSheet("background-color:rgb(255,0,0)");
+        }
+        istimeout=false;
+    }
+    mutex.unlock();
+}
+
+void workwidget::timerEvent(QTimerEvent *)
+{
+    killTimer(timerid);
+    mutex.lock();
+    istimeout=true;
+    mutex.unlock();
 }

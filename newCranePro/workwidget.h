@@ -33,6 +33,8 @@ private:
     QWidget *menu;
     bool IsWorking;
     bool IsManInput;
+    void timerEvent(QTimerEvent *);
+    bool istimeout;
 
     WorkInfo SaveWorkInfo[3];
     WRState mRecordState;
@@ -40,6 +42,9 @@ private:
 
     BaseFile *pWorkInfoFile;
     RecordFile *pMRecordState;
+
+    QMutex mutex;
+    int timerid;
 
 public slots:
     void UpdataNetWorkInfoSlot();
@@ -51,9 +56,12 @@ public slots:
     void WorkFinished();
     void ToWorkWidget();
 
+    void MenuShow();
+
 private slots:
     void on_StartWorkBtn_clicked();
     void on_FinishWorkBtn_clicked();
+//    void on_MenuBtn_clicked();
 };
 
 #endif // WORKWIDGET_H
