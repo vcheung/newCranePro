@@ -18,15 +18,21 @@ SOURCES += main.cpp\
     workwidget.cpp \
     completework.cpp \
     basefile.cpp \
-    recordfile.cpp
+    recordfile.cpp \
+    secretinput.cpp \
+    adjusttimewidget.cpp
 
 HEADERS  += mainwindow.h \
     workwidget.h \
     completework.h \
     ConfigureData.h \
     basefile.h \
-    recordfile.h
+    recordfile.h \
+    secretinput.h \
+    adjusttimewidget.h
 
 FORMS    += mainwindow.ui \
     workwidget.ui \
-    completework.ui
+    completework.ui \
+    secretinput.ui \
+    adjusttimewidget.ui

@@ -45,4 +45,6 @@ extern QMutex FileMutex;
 extern int mWorkingState;
 extern long WorkCode;
 
+extern QString Password;
+
 #endif // CONFIGUREDATA_H

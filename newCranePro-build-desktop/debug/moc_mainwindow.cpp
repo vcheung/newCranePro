@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Mon Sep 16 15:22:10 2013
+** Created: Fri Sep 20 10:13:28 2013
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,18 +23,28 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
+ // slots: signature, parameters, type, tag, flags
+      12,   11,   11,   11, 0x0a,
+      27,   11,   11,   11, 0x0a,
+      44,   11,   11,   11, 0x0a,
+      59,   11,   11,   11, 0x0a,
+      76,   11,   11,   11, 0x0a,
+      87,   11,   11,   11, 0x0a,
+
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWindow[] = {
-    "MainWindow\0"
+    "MainWindow\0\0ToSecretTime()\0ToSecretSensor()\0"
+    "ToSecretPara()\0ToSecretSysEle()\0"
+    "ShutDown()\0ToGThsecSlot()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -64,6 +74,18 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: ToSecretTime(); break;
+        case 1: ToSecretSensor(); break;
+        case 2: ToSecretPara(); break;
+        case 3: ToSecretSysEle(); break;
+        case 4: ShutDown(); break;
+        case 5: ToGThsecSlot(); break;
+        default: ;
+        }
+        _id -= 6;
+    }
     return _id;
 }
 QT_END_MOC_NAMESPACE

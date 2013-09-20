@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\workwidget.o
+./debug\completework.o
+./debug\basefile.o
+./debug\recordfile.o
+./debug\secretinput.o
+./debug\moc_mainwindow.o
+./debug\moc_workwidget.o
+./debug\moc_completework.o
+./debug\moc_secretinput.o
+);

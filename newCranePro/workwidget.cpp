@@ -51,6 +51,8 @@ workwidget::workwidget(QWidget *parent) :
     connect(CoWork,SIGNAL(WorkFinishedSig()),this,SLOT(WorkFinished()));
     connect(CoWork,SIGNAL(SwitchToWorkSig()),this,SLOT(ToWorkWidget()));
     connect(ui->MenuBtn,SIGNAL(clicked()),this,SLOT(MenuShow()));
+
+    connect(ui->ConDriverName,SIGNAL(currentIndexChanged(int)),this,SLOT(ComIndexChange(int)));
 }
 
 workwidget::~workwidget()
@@ -320,4 +322,60 @@ void workwidget::timerEvent(QTimerEvent *)
     mutex.lock();
     istimeout=true;
     mutex.unlock();
+}
+
+void workwidget::on_QuPiBtn_clicked()
+{
+    mWorkingState = QuPi;
+}
+
+/***
+ *菜单按钮槽函数
+ ***************/
+void workwidget::SwitchToTimeSecretSlot()
+{
+    emit SwitchToTimeSecretSignal();    //mainwindow里连接菜单发出信号和对应的函数
+    this->menu->setVisible(false);
+    ui->MenuBtn->setText("打开菜单");
+    ui->MenuBtn->setStyleSheet("background-color:rgb(0,170,0)");
+}
+
+void workwidget::SwitchToSensorSecretSlot()
+{
+    emit SwitchToSensorSecretSlot();
+    this->menu->setVisible(false);
+    ui->MenuBtn->setText("打开菜单");
+    ui->MenuBtn->setStyleSheet("background-color:rgb(0,170,0)");
+}
+
+void workwidget::SwitchToParaSecretSlot()
+{
+    emit SwitchToParaSecretSignal();
+    this->menu->setVisible(false);
+    ui->MenuBtn->setText("打开菜单");
+    ui->MenuBtn->setStyleSheet("background-color:rgb(0,170,0)");
+}
+
+void workwidget::SwitchToSysEleSecretSlot()
+{
+    emit SwitchToSysEleSecretSignal();
+    this->menu->setVisible(false);
+    ui->MenuBtn->setText("打开菜单");
+    ui->MenuBtn->setStyleSheet("background-color:rgb(0,170,0)");
+}
+
+void workwidget::ShutDown()
+{
+    emit ShutDownSignal();
+    this->menu->setVisible(false);
+    ui->MenuBtn->setText("打开菜单");
+    ui->MenuBtn->setStyleSheet("background-color:rgb(0,170,0)");
+}
+
+void workwidget::SwitchToGThSecretSlot()
+{
+    emit SwitchToGThSecretSignal();
+    this->menu->setVisible(false);
+    ui->MenuBtn->setText("打开菜单");
+    ui->MenuBtn->setStyleSheet("background-color:rgb(0,170,0)");
 }

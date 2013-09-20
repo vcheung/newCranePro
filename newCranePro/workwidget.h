@@ -58,10 +58,26 @@ public slots:
 
     void MenuShow();
 
+    void SwitchToTimeSecretSlot();
+    void SwitchToSensorSecretSlot();
+    void SwitchToParaSecretSlot();
+    void SwitchToSysEleSecretSlot();
+    void ShutDown();
+    void SwitchToGThSecretSlot();
+
+signals:
+    void SwitchToTimeSecretSignal();
+    void SwitchToSensorSecretSignal();
+    void SwitchToParaSecretSignal();
+    void SwitchToSysEleSecretSignal();
+    void ShutDownSignal();
+    void SwitchToGThSecretSignal();
+
 private slots:
     void on_StartWorkBtn_clicked();
     void on_FinishWorkBtn_clicked();
 //    void on_MenuBtn_clicked();
+    void on_QuPiBtn_clicked();
 };
 
 #endif // WORKWIDGET_H
