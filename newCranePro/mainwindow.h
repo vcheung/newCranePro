@@ -5,6 +5,8 @@
 #include "workwidget.h"     //工作界面
 #include "secretinput.h"    //参数修改前输入密码
 #include <QPropertyAnimation>   //动画设置
+#include "adjusttimewidget.h"
+#include "adjustparameter.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,10 +20,11 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     workwidget *Work;
+    adjusttimewidget *Adjust_tim;
+    adjustparameter *Adjust_par;
 
     /****** 动画设置函数 ******/
     void CreateAnimation(QWidget *w,const QEasingCurve & easing,int coordx,int coordy);
-    void ToWork();
 
     SecretInput *SecInTime;
     SecretInput *SecInSensor;
@@ -38,12 +41,17 @@ public:
     QEasingCurve Anim5;
 
 public slots:
+    void ToWork();
+
     void ToSecretTime();
     void ToSecretSensor();
     void ToSecretPara();
     void ToSecretSysEle();
     void ShutDown();
     void ToGThsecSlot();
+
+    void ToTimeSlot();
+    void ToParaSlot();
     
 private:
     Ui::MainWindow *ui;

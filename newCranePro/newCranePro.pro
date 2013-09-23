@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     basefile.cpp \
     recordfile.cpp \
     secretinput.cpp \
-    adjusttimewidget.cpp
+    adjusttimewidget.cpp \
+    adjustparameter.cpp
 
 HEADERS  += mainwindow.h \
     workwidget.h \
@@ -29,10 +30,12 @@ HEADERS  += mainwindow.h \
     basefile.h \
     recordfile.h \
     secretinput.h \
-    adjusttimewidget.h
+    adjusttimewidget.h \
+    adjustparameter.h
 
 FORMS    += mainwindow.ui \
     workwidget.ui \
     completework.ui \
     secretinput.ui \
-    adjusttimewidget.ui
+    adjusttimewidget.ui \
+    adjustparameter.ui

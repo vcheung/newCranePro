@@ -25,6 +25,7 @@ typedef struct
     char CurrEle[5];
 }BackWorkInfo;
 
+//存储数据结构
 typedef struct
 {
     int WritePos;
@@ -45,6 +46,7 @@ extern QMutex FileMutex;
 extern int mWorkingState;
 extern long WorkCode;
 
-extern QString Password;
+extern QString SysPassword;
+extern char MachID;
 
 #endif // CONFIGUREDATA_H

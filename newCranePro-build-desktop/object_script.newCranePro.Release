@@ -6,8 +6,12 @@ INPUT(
 ./release\basefile.o
 ./release\recordfile.o
 ./release\secretinput.o
+./release\adjusttimewidget.o
+./release\adjustparameter.o
 ./release\moc_mainwindow.o
 ./release\moc_workwidget.o
 ./release\moc_completework.o
 ./release\moc_secretinput.o
+./release\moc_adjusttimewidget.o
+./release\moc_adjustparameter.o
 );

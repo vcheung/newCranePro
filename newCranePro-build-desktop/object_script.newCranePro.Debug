@@ -6,8 +6,12 @@ INPUT(
 ./debug\basefile.o
 ./debug\recordfile.o
 ./debug\secretinput.o
+./debug\adjusttimewidget.o
+./debug\adjustparameter.o
 ./debug\moc_mainwindow.o
 ./debug\moc_workwidget.o
 ./debug\moc_completework.o
 ./debug\moc_secretinput.o
+./debug\moc_adjusttimewidget.o
+./debug\moc_adjustparameter.o
 );

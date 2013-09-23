@@ -13,6 +13,10 @@ MainWindow::MainWindow(QWidget *parent) :
     Work = new workwidget;
     Work->show();
 
+    /****** 菜单 ******/
+    Adjust_tim = new adjusttimewidget;
+    Adjust_par = new adjustparameter;
+
     /****** 参数修改前输入密码界面 ******/
     SecInTime = new SecretInput(0);
     SecInSensor = new SecretInput(1);
@@ -33,6 +37,12 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(SecInPara,SIGNAL(SwitchToWorkSignal_Sec()),this,SLOT(ToWork()));
     connect(SecInSysEle,SIGNAL(SwitchToWorkSignal_Sec()),this,SLOT(ToWork()));
     connect(SecInTG,SIGNAL(SwitchToWorkSignal_Sec()),this,SLOT(ToWork()));
+
+    connect(SecInTime,SIGNAL(SwitchToTimeSignal()),this,SLOT(ToTimeSlot()));
+    connect(SecInPara,SIGNAL(SwitchToParaSignal()),this,SLOT(ToParaSlot()));
+
+    connect(Adjust_tim,SIGNAL(SwitchToWorkSignal_Time()),this,SLOT(ToWork()));
+    connect(Adjust_par,SIGNAL(SwitchToWorkSignal_Para()),this,SLOT(ToWork()));
 }
 
 MainWindow::~MainWindow()
@@ -100,11 +110,30 @@ void MainWindow::ShutDown()
 
 void MainWindow::ToWork()
 {
-    Work->show();
-//    CreateAnimation(Work,Anim0,800,480);
+
     SecInTG->hide();
     SecInTime->hide();
     SecInSensor->hide();
     SecInPara->hide();
     SecInSysEle->hide();
+    Adjust_tim->hide();
+    Adjust_par->hide();
+    Work->show();
+//    CreateAnimation(Work,Anim0,800,480);
+}
+
+/******
+ * 界面转换
+ *****************/
+void MainWindow::ToTimeSlot()
+{
+    Adjust_tim->show();
+    Adjust_tim->ShowCurrentTime();
+    SecInTime->hide();
+}
+
+void MainWindow::ToParaSlot()
+{
+    Adjust_par->show();
+    SecInPara->hide();
 }

@@ -33,7 +33,7 @@ private:
     QWidget *menu;
     bool IsWorking;
     bool IsManInput;
-    void timerEvent(QTimerEvent *);
+//    void timerEvent(QTimerEvent *);
     bool istimeout;
 
     WorkInfo SaveWorkInfo[3];

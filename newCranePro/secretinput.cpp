@@ -11,6 +11,7 @@ SecretInput::SecretInput(int type , QWidget *parent) :
     ui(new Ui::SecretInput)
 {
     ui->setupUi(this);
+    this->setWindowFlags(Qt::FramelessWindowHint);
     CreateErrorPrompter();
     m_type = type;
 }

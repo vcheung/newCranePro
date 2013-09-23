@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Fri Sep 20 10:13:28 2013
+** Created: Mon Sep 23 16:08:43 2013
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,19 +32,23 @@ static const uint qt_meta_data_MainWindow[] = {
 
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x0a,
-      27,   11,   11,   11, 0x0a,
-      44,   11,   11,   11, 0x0a,
-      59,   11,   11,   11, 0x0a,
-      76,   11,   11,   11, 0x0a,
-      87,   11,   11,   11, 0x0a,
+      21,   11,   11,   11, 0x0a,
+      36,   11,   11,   11, 0x0a,
+      53,   11,   11,   11, 0x0a,
+      68,   11,   11,   11, 0x0a,
+      85,   11,   11,   11, 0x0a,
+      96,   11,   11,   11, 0x0a,
+     111,   11,   11,   11, 0x0a,
+     124,   11,   11,   11, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWindow[] = {
-    "MainWindow\0\0ToSecretTime()\0ToSecretSensor()\0"
-    "ToSecretPara()\0ToSecretSysEle()\0"
-    "ShutDown()\0ToGThsecSlot()\0"
+    "MainWindow\0\0ToWork()\0ToSecretTime()\0"
+    "ToSecretSensor()\0ToSecretPara()\0"
+    "ToSecretSysEle()\0ShutDown()\0ToGThsecSlot()\0"
+    "ToTimeSlot()\0ToParaSlot()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -76,15 +80,18 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: ToSecretTime(); break;
-        case 1: ToSecretSensor(); break;
-        case 2: ToSecretPara(); break;
-        case 3: ToSecretSysEle(); break;
-        case 4: ShutDown(); break;
-        case 5: ToGThsecSlot(); break;
+        case 0: ToWork(); break;
+        case 1: ToSecretTime(); break;
+        case 2: ToSecretSensor(); break;
+        case 3: ToSecretPara(); break;
+        case 4: ToSecretSysEle(); break;
+        case 5: ShutDown(); break;
+        case 6: ToGThsecSlot(); break;
+        case 7: ToTimeSlot(); break;
+        case 8: ToParaSlot(); break;
         default: ;
         }
-        _id -= 6;
+        _id -= 9;
     }
     return _id;
 }
